@@ -33,7 +33,8 @@ img {                                                                     /*Para
     position: relative;                                                   /* Posiciona o elemento normalmente, permitindo ajustes com top/right/bottom/left */
     top: 10vh;                                                            /* desloca a imagem 10% da altura da tela para baixo */
     right: 0;                                                             /* remove deslocamento manual para a direita */
-    margin: 0 auto;                                                       /* centraliza a imagem horizontalmente */
+    margin: 0 auto;   
+    margin-right: 30vw;                                                  /* centraliza a imagem horizontalmente */
     width: 60%;                                                           /* largura img*/
     height: auto;                                                         /* Comprimento img*/
 }
