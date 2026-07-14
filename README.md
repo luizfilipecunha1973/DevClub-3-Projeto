@@ -1,6 +1,6 @@
-#  DevClub — Exercício 3
+# DevClub — Exercício 3
 
-Página desenvolvida como exercício do curso **DevClub**, utilizando HTML e CSS para praticar estruturação, estilização e organização de assets.
+Página desenvolvida como exercício do curso ***DevClub***, utilizando HTML e CSS para praticar estruturação, estilização e organização de assets.
 
 ![Ilustração do projeto](./assets/MulherCelular.svg)
 
