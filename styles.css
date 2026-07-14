@@ -1,0 +1,167 @@
+/* para o margin: auto, funcionar o display tem que ser block */
+/**/
+
+* {                                                                       /* Zeramento Geral*/
+    margin: 0;                                                            /* Zeramento margem */
+    padding: 0;                                                           /* espaço interno entre o conteúdo e a borda do elemento */
+    box-sizing: border-box;                                               /* faz a largura e altura incluir padding e borda */
+    font-family: 'Oswald', sans-serif;                                    /* fonte utilizada pelo sistema */
+    font-weight: 400;                                                     /* grossura da fonte */
+    color: #5d5d7d;                                                     /* cor da fonte utilizada */
+}
+
+.conteiner{                                                               /* Classe .conteiner*/
+    height: 100vh;                                                        /* altura da tela. 100vh é o total do tamanho da tela */
+    width: 100vw;                                                         /* largura da tela 100vw é o total do tamanho da tela */
+}
+
+.conteiner-left {
+    display: inline-block;                                                /* Elemento na linha (inline) que aceita largura e altura (block) */
+    width: 60%;                                                           /* cada bloco ocupa metade da largura */
+}
+
+.conteiner-right {                                                        /* classe conteiner-right*/
+    display: inline-block;                                                /* torna o conteúdo do bloco em coluna */
+    background-color: rgba(93, 93, 125, 0.16);                          /* Cor de fundo (cor RGB+opacidade) */
+    height: 100vh;                                                        /* ocupar todo o espaço na vertical */
+    width:  40%;                                                          /* ocupar todo o espaço na horizontal */
+    position: absolute;                                                   /* Torna a posição absoluta */
+}
+
+img {                                                                     /*Parametros para a imagem*/
+    display: block;                                                       /* permite centralizar com margin auto */
+    position: relative;                                                   /* Posiciona o elemento normalmente, permitindo ajustes com top/right/bottom/left */
+    top: 10vh;                                                            /* desloca a imagem 10% da altura da tela para baixo */
+    right: 0;                                                             /* remove deslocamento manual para a direita */
+    margin: 0 auto;                                                       /* centraliza a imagem horizontalmente */
+    width: 60%;                                                           /* largura img*/
+    height: auto;                                                         /* Comprimento img*/
+}
+
+h1 {                                                                      /* Configurações para o h1*/
+    font-size: 70px;                                                      /* define o tamanho do título */
+    line-height: 80px;                                                    /* define o espaçamento entre linhas do título */
+    margin: 10vh 10vw;                                                    /* define margem vertical e horizontal do título */
+}
+
+p{                                                                        /* Configuraçoes do Paragrafo*/
+    font-size: 28px;                                                      /* define o tamanho do texto do parágrafo */
+    line-height: 48px;                                                    /* define o espaçamento entre linhas do parágrafo */
+    opacity: 0.6;                                                         /* reduz a opacidade do texto */
+    margin: 10vh 10vw;                                                    /* define margem vertical e horizontal do parágrafo */
+    text-align: justify                                                   /* justifica o texto */
+}
+
+header {                                                                  /* Configurações para o header*/
+    display: flex;                                                        /* transforma o header em um container flex */
+    justify-content: space-around;                                        /* distribui os itens com espaço ao redor */
+    gap: 30px;                                                            /* adiciona espaço entre os links */
+    padding: 4vh 3vw;                                                     /* adiciona espaçamento interno no header */
+}
+
+.menu {                                                                   /* Configurações p/ o menu*/
+    text-decoration: none;                                                /* remove o sublinhado dos links */
+    font-size: 28px;                                                      /* define o tamanho dos links */
+    cursor: pointer;                                                      /* muda o cursor para ponteiro ao passar por cima */
+}
+
+button {                                                                  /* Configurações para o menu */
+    width: 269px;                                                         /* define a largura do botão */
+    height: 62px;                                                         /* define a altura do botão */
+    background: #9499EA;                                                /* define a cor de fundo do botão */
+    box-shadow: 0px 10px 24px rgba(148, 153, 234, 0.0979959);           /* adiciona sombra ao botão */
+    border: none;                                                         /* remove a borda do botão */
+    border-radius: 30px;                                                  /* arredonda as bordas do botão */
+    font-size: 24px;                                                      /* define o tamanho do texto do botão */
+    line-height: 36px;                                                    /* define a altura da linha do botão */
+    text-align: center;                                                   /* centraliza o texto do botão */
+    color: #ffffff;                                                     /* define a cor do texto do botão */
+    cursor: pointer;                                                      /* muda o cursor para ponteiro */
+    margin: 0vh 10vw;                                                     /* define margem vertical e horizontal do botão */
+}
+
+button:hover {                                                            /* pseudo-classe do button*/
+    opacity: 0.8;                                                         /* reduz a opacidade ao passar o mouse */
+}
+
+button:active {                                                           /* pseudo-classe do button*/
+    opacity: 0.5;                                                         /* reduz a opacidade ao clicar */
+}
+
+.menu:hover {                                                            /* pseudo-classe do button*/
+    opacity: 0.8;                                                        /* reduz a opacidade ao passar o mouse */
+}
+
+.menu:active {                                                           /* pseudo-classe do button*/
+    opacity: 0.5;                                                        /* reduz a opacidade ao clicar */
+}
+
+/*------------Respansividade------------*/
+/* @media screen and (min-width: 360px) and (max-width: 390px) {            faz novas xonfigurações para Smart fone */
+
+@media screen and (min-width: 360px) and (max-width: 500px) {            
+
+    .conteiner-left {
+        width: 100%;                  /* cada bloco ocupa a largura total da linha tela */
+        height: 50%;                  /* Para ocupar 50% da tela vertical*/
+        padding: 0;                   /* espaço entre o elemento e a margem*/
+        margin:  0;                   /* espaço externo aoredor do elemento*/
+    }
+
+    .conteiner-right {
+        height: auto;                 /* Altura Automatica, para que o elemento se adapt automaticamente*/
+        min-height: 100vh;            /* garante que o fundo vá até o final da altura da tela */
+        width: 100%;                  /* Para ocular a largura da tela toda*/
+        position: static;             /* position absolut-remove o elemento do fluxo normal do documento, fazendo com que elemento
+                                                          flutue sobre a página. Sua posição é definida em relação ao seu ancestral 
+                                                          ("pai") mais próximo que também possua um posicionamento definido (como 
+                                                          relative ou absolute). Se nenhum pai for posicionado, ele toma o corpo da
+                                                          página como referencia.
+                                         position static-É o posicionamento padrão de todos os elementos HTML. Ele segue o fluxo 
+                                                         natural da página (de cima para baixo, da esquerda para a direita) e 
+                                                         ignora propriedades de deslocamento como top, bottom, left, right e 
+                                                         z-index */                                                         
+        display: block;               /* display block-Não permite que o elemento fique na mesma linha display inline-block-Quebra 
+                                         a linha permitindo que o elemento fique na mesma linha*/
+        padding: 40px;
+    }
+
+    header {
+        display: none;                 /* desativa/faz ignora todo o header*/
+    }
+
+    img {
+        display: block;                /* permite centralizar com margin auto */
+        position: static;              /* ver acima obs*/
+        margin: 0 auto;                /* centraliza a imagem horizontalmente em telas menores */
+        max-width: 70%;                /* o maximo do tamanho da imagem será 70%*/
+    }
+
+    h1 {
+        font-size:   36px;                 /* reduz o título para telas menores */
+        line-height: 52px;                 /* controla a altura da linha */
+        width:       auto;                 /* Cada elemento ocula toda line para se adaptar a tela*/
+        margin:      58px 50px 0px 50px;   /* Margem top/right/botton/left */
+        text-align:  center;               /* texto alinhado ao centro*/
+    }
+
+    p {
+        margin: 15px 40px;             /* define margem em telas pequenas */
+        width: auto;                   /* É valor padrão para a largura de um elemento em CSS. 
+                                          Ele instrui o navegador a calcular automaticamente a 
+                                          largura com base no tipo de elemento, no conteúdo que 
+                                          ele abriga e no espaço disponível*/
+        text-align:  center;           /* deixa o texto centralizado ao centro*/
+        font-size:   14px;             /* reduz o texto do parágrafo */
+        line-height: 24px;             /* melhora a leitura em telas menores */
+    }
+
+    button {                           /* para a margem auto funcionar o display tem que ser block*/
+        width: 200px;                                                         /* define a largura do botão */
+        height: 40px;                                                         /* define a altura do botão */
+        font-size: 17px;                                                      /* define o tamanho do texto do botão */
+        line-height: 20px;                                                    /* define a altura da linha do botão */
+        display: block;                /* torna o botão em bloco para a margem auto centralizar */
+        margin: auto;                  /* centraliza o botão horizontalmente */
+    }
+}
